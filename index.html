@@ -53,7 +53,7 @@ function loadImg() {
 	<style type="text/css">
 	body {
 		background: #EDEDED;
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
 	}
 	img {
 		max-height: 800px;
@@ -75,6 +75,102 @@ function loadImg() {
 	img {
 		max-width: 100%;
 	}
+	#score:focus,#button:focus{
+		outline:none;
+	}
+	#score{
+		display:inline-block;
+		border:0;
+		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
+		width:80%;
+		border-radius:0;
+		font-size:1rem;
+		float:left;
+		padding-left:1em;
+		border-bottom-left-radius:1em;
+		border-top-left-radius:1em;
+		
+	}
+	*{
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	transition:all 0.5s;
+
+	}
+	a,a:visited{
+		text-decoration:none;
+		color:#333;
+		border-bottom:1px solid #3498db;
+	}
+	a:hover,a:active{
+		border-bottom-color:transparent;
+		color:#3498db;
+	}
+	#button{
+		display:inline-block;
+		border:0;
+		font-size:1rem;
+		width:20%;
+		float:left;
+		color:#fff;
+		background-color:#3498db;
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
+		cursor:pointer;
+		padding-left:0.5em;
+	}
+	#button:active,#button:hover{
+		background-color:#2980b9;
+	}
+	#heading{
+		font-family:'bird';
+		color:#fff;
+		font-size:4em;
+		letter-spacing:-5px;
+		-webkit-text-stroke:5px #333;
+		text-stroke:5px #333;
+		text-shadow:0 7px #333;
+		margin-top:-0.5em;
+	}
+	h5{
+		margin-top:-0.5em;
+	}
+	p{
+		font-size:1.1em;
+	}
+	@viewport{
+	zoom: 1.0;
+	width: extend-to-zoom;
+}
+@-ms-viewport{
+	width: extend-to-zoom;
+	zoom: 1.0;
+}
+@media screen and (max-width: 1080px) {
+	#form{
+		width:90%;
+	}
+	#heading{
+		letter-spacing:0;
+	}
+}
+::-webkit-scrollbar {
+    width: 1rem;
+}
+ 
+::-webkit-scrollbar-track {
+	background-color:transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color:#333;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color:#3498db;
+}
 	</style>
 </head>
 <body>
@@ -88,12 +184,12 @@ function loadImg() {
 		</p>
 		<div id="form" onsubmit="loadImg();">
 			<input id="score" type="number" min="0" step="1" class="frmEl"></input>
-			<button onclick="loadImg();" class="frmEl">Make!</button>
+			<button onclick="loadImg();" class="frmEl" id="button">Make!</button>
 		</div>
-		<br>
+		<br><br><br>
 		<div id="response"></div>
 		<hr>
-		<p class="text-muted">Made with ♥ by <a href="http://facebook.com/itsreallyakshat">Akshat Mittal</a>.<br>
+		<p class="text-muted">Made with ♥ by <a href="http://facebook.com/itsreallyakshat">Akshat Mittal</a>.<br><br>
           <iframe src="http://www.facebook.com/plugins/follow.php?href=http%3A%2F%2Ffacebook.com%2Fitsreallyakshat&amp;width&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;show_faces=true&amp;appId=367581389983871" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px;height:21px;" allowTransparency="true"></iframe>
           <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fakshatmittal.github.io%2Fflapscore%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=367581389983871" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px;height:21px;" allowTransparency="true"></iframe>
           <g:follow href="https://plus.google.com/114260244105928483584" rel="author"></g:follow>
