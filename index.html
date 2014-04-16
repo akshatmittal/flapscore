@@ -23,6 +23,14 @@
     <link rel="author" href="http://facebook.com/itsreallyakshat"/>
     <link rel="publisher" href="https://plus.google.com/+AkshatMittal" />
 	<script type="text/javascript">
+	window.onload = function() {
+		if(location.hash.split("!.")[1] != undefined){
+			if(parseInt(location.hash.split("!.")[1]) != NaN && parseInt(location.hash.split("!.")[1]) != 0) {
+				document.getElementById("score").value = parseInt(location.hash.split("!.")[1]);
+				makeImg();
+			}
+		}
+	}
 	var run = 0;
 function loadImg() {
 	var xmlhttp;
